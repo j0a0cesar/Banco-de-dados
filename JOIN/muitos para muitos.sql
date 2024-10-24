@@ -96,7 +96,7 @@ join disciplinas as d
 on d.id_disciplina = n.id_disciplina;
 
 /* Mostra a média dos estudantes nas disciplinas */
-select estudantes.nome_estudante, avg(notas.nota) as media
+select estudantes.nome_estudante,round(avg(notas.nota),2) as media
 from estudantes join notas
 on estudantes.id_estudante = notas.id_estudante
 group by estudantes.nome_estudante;
